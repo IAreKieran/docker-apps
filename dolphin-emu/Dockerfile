@@ -9,7 +9,7 @@ RUN apt-add-repository ppa:dolphin-emu/ppa \
     	&& rm -rf /var/lib/apt/lists/*
 
 # Add dolphin-emu user
-RUN groupadd -r dolphin-emu && useradd -r -g dolphin-emu -G audio,video dolphin-emu \
+RUN groupadd -r dolphin-emu && useradd -r -u 1000 -g dolphin-emu -G audio,video dolphin-emu \
     && mkdir -p /home/dolphin-emu/Downloads && chown -R dolphin-emu:dolphin-emu /home/dolphin-emu
 
 # Run dolphin-emu as non privileged user
