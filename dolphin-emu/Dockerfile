@@ -15,14 +15,14 @@ RUN apt-add-repository ppa:dolphin-emu/ppa \
 	&& apt-get update && apt-get install -y --no-install-recommends dolphin-emu \
     	&& rm -rf /var/lib/apt/lists/*
 
-# Add dolphin-emu user
+# Add docker-apps user
 ARG HOST_USER_ID
 ARG HOST_USER_GID
-RUN groupadd -r -g $HOST_USER_GID dolphin-emu && useradd -r -u $HOST_USER_ID -g dolphin-emu -G audio,video dolphin-emu \
-    && mkdir -p /home/dolphin-emu/Downloads && chown -R dolphin-emu:dolphin-emu /home/dolphin-emu
+RUN groupadd -r -g $HOST_USER_GID docker-apps && useradd -r -u $HOST_USER_ID -g docker-apps -G audio,video docker-apps \
+    && mkdir -p /home/docker-apps/Downloads && chown -R docker-apps:docker-apps /home/docker-apps
 
-# Run dolphin-emu as non privileged user
-USER dolphin-emu
+# Run as non privileged user
+USER docker-apps
 
 ENTRYPOINT [ "/usr/games/dolphin-emu" ]
 #ENTRYPOINT ["tail", "/dev/null", "-f"]
