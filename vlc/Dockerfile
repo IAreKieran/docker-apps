@@ -1,5 +1,11 @@
 FROM ubuntu:18.04
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+	    libgl1-mesa-dri \
+	    libgl1-mesa-glx \
+	    vlc \
+    && rm -rf /var/lib/apt/lists/*
+
 # Add docker-apps user
 ARG HOST_USER_ID
 ARG HOST_USER_GID

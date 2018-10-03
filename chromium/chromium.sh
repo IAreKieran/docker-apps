@@ -1,4 +1,4 @@
-APP='firefox'
+APP='chromium'
 
 # docker-apps settings
 PROJECT_DIR=`git rev-parse --show-toplevel`
@@ -10,12 +10,12 @@ HOST_USER_GID=`id -g`
 
 
 # Mount points - Host
-HOST_DATA_1="$APP_DATA/.mozilla"
+HOST_DATA_1="$APP_DATA/.config"
 HOST_DATA_2="$APP_DATA/Downloads"
 
 
 # Mount points - Container
-CONTAINER_DATA_1="/home/docker-apps/.mozilla"
+CONTAINER_DATA_1="/home/docker-apps/.config/chromium"
 CONTAINER_DATA_2="/home/docker-apps/Downloads"
 
 # Build
@@ -31,6 +31,7 @@ if [ ! -d "$APP_DATA" ]; then
   docker run --rm -d \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=unix$DISPLAY \
+    --cap-add=SYS_ADMIN \
     --name=$APP docker-apps:$APP
 
   # Wait for app to finish making files created on first startup, then copy to host
@@ -41,6 +42,8 @@ if [ ! -d "$APP_DATA" ]; then
   docker stop $APP
 fi
 
+docker stop $APP 2>/dev/null
+
 docker run --rm -d \
   --hostname=$APP \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
@@ -48,4 +51,6 @@ docker run --rm -d \
   -v "$HOST_DATA_2:$CONTAINER_DATA_2" \
   -e DISPLAY=unix$DISPLAY \
   --name=$APP \
+  --cap-add=SYS_ADMIN \
+   --device=/dev/dri \
   docker-apps:$APP
