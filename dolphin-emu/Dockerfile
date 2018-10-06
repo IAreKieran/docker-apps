@@ -25,4 +25,3 @@ RUN groupadd -r -g $HOST_USER_GID docker-apps && useradd -r -u $HOST_USER_ID -g 
 USER docker-apps
 
 ENTRYPOINT [ "/usr/games/dolphin-emu" ]
-#ENTRYPOINT ["tail", "/dev/null", "-f"]
