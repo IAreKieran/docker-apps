@@ -1,159 +1,42 @@
-[gd_resource type="EditorSettings" load_steps=13 format=2]
+[gd_resource type="EditorSettings" load_steps=4 format=2]
 
 [sub_resource type="InputEventKey" id=1]
 
 device = 0
 alt = false
-shift = false
-control = true
+shift = true
+control = false
 meta = false
-command = true
+command = false
 pressed = false
-scancode = 78
-unicode = 78
+scancode = 16777245
+unicode = 16777245
 echo = false
 
 [sub_resource type="InputEventKey" id=2]
 
 device = 0
 alt = false
-shift = false
+shift = true
 control = false
 meta = false
 command = false
 pressed = false
-scancode = 16777224
-unicode = 16777224
+scancode = 16777246
+unicode = 16777246
 echo = false
 
 [sub_resource type="InputEventKey" id=3]
 
 device = 0
 alt = false
-shift = false
-control = true
-meta = false
-command = true
-pressed = false
-scancode = 68
-unicode = 68
-echo = false
-
-[sub_resource type="InputEventKey" id=4]
-
-device = 0
-alt = true
-shift = false
+shift = true
 control = false
 meta = false
 command = false
 pressed = false
-scancode = 16777231
-unicode = 16777231
-echo = false
-
-[sub_resource type="InputEventKey" id=5]
-
-device = 0
-alt = true
-shift = false
-control = false
-meta = false
-command = false
-pressed = false
-scancode = 16777233
-unicode = 16777233
-echo = false
-
-[sub_resource type="InputEventKey" id=6]
-
-device = 0
-alt = true
-shift = false
-control = false
-meta = false
-command = false
-pressed = false
-scancode = 16777232
-unicode = 16777232
-echo = false
-
-[sub_resource type="InputEventKey" id=7]
-
-device = 0
-alt = false
-shift = false
-control = true
-meta = false
-command = true
-pressed = false
-scancode = 16777234
-unicode = 16777234
-echo = false
-
-[sub_resource type="InputEventKey" id=8]
-
-device = 0
-alt = false
-shift = false
-control = true
-meta = false
-command = true
-pressed = false
-scancode = 16777232
-unicode = 16777232
-echo = false
-
-[sub_resource type="InputEventKey" id=9]
-
-device = 0
-alt = false
-shift = false
-control = false
-meta = false
-command = false
-pressed = false
-scancode = 16777248
-unicode = 16777248
-echo = false
-
-[sub_resource type="InputEventKey" id=10]
-
-device = 0
-alt = true
-shift = false
-control = false
-meta = false
-command = false
-pressed = false
-scancode = 70
-unicode = 70
-echo = false
-
-[sub_resource type="InputEventKey" id=11]
-
-device = 0
-alt = false
-shift = false
-control = true
-meta = false
-command = true
-pressed = false
-scancode = 72
-unicode = 72
-echo = false
-
-[sub_resource type="InputEventKey" id=12]
-
-device = 0
-alt = true
-shift = false
-control = false
-meta = false
-command = false
-pressed = false
-scancode = 86
-unicode = 86
+scancode = 16777247
+unicode = 16777247
 echo = false
 
 [resource]
@@ -162,7 +45,7 @@ interface/editor/editor_language = "en"
 interface/editor/hidpi_mode = 0
 interface/scene_tabs/show_script_button = false
 interface/editor/main_font_size = 14
-interface/editor/code_font_size = 14
+interface/editor/code_font_size = 9.0
 interface/editor/main_font_hinting = 2
 interface/editor/code_font_hinting = 2
 interface/editor/main_font = ""
@@ -330,5 +213,76 @@ text_editor/help/help_font_size = 15
 text_editor/help/help_source_font_size = 14
 run/output/font_size = 13
 asset_library/use_threads = true
-shortcuts = [ "file_dialog/create_folder", SubResource( 1 ), "file_dialog/delete", SubResource( 2 ), "file_dialog/focus_path", SubResource( 3 ), "file_dialog/go_back", SubResource( 4 ), "file_dialog/go_forward", SubResource( 5 ), "file_dialog/go_up", SubResource( 6 ), "file_dialog/move_favorite_down", SubResource( 7 ), "file_dialog/move_favorite_up", SubResource( 8 ), "file_dialog/refresh", SubResource( 9 ), "file_dialog/toggle_favorite", SubResource( 10 ), "file_dialog/toggle_hidden_files", SubResource( 11 ), "file_dialog/toggle_mode", SubResource( 12 ) ]
+projects/::home::docker-apps::godot-projects::chef_sloth::Main::chef_sloth = "/home/docker-apps/godot-projects/chef_sloth/Main/chef_sloth"
+projects/::home::docker-apps::godot-projects::chef_sloth::Main::flex = "/home/docker-apps/godot-projects/chef_sloth/Main/flex"
+projects/::home::docker-apps::godot-projects::chef_sloth::Main::platform = "/home/docker-apps/godot-projects/chef_sloth/Main/platform"
+export/android/adb = ""
+export/android/jarsigner = ""
+export/android/debug_keystore = ""
+export/android/debug_keystore_user = "androiddebugkey"
+export/android/debug_keystore_pass = "android"
+export/android/force_system_user = false
+export/android/timestamping_authority_url = ""
+export/android/shutdown_adb_on_exit = true
+export/windows/rcedit = ""
+export/windows/wine = ""
+interface/scene_tabs/always_show_close_button = false
+interface/editor/show_type_icons = false
+interface/editor/capitalize_properties = true
+interface/editor/disable_inspector_folding = false
+filesystem/file_server/port = 6010
+filesystem/file_server/password = ""
+editors/3d/manipulator_gizmo_size = 80
+editors/3d/manipulator_gizmo_opacity = 0.2
+debugger/auto_switch_to_remote_scene_tree = false
+debugger/remote_scene_tree_refresh_interval = 1.0
+debugger/remote_inspect_refresh_interval = 0.2
+debugger/profiler_frame_history_size = 600
+debugger/profiler_frame_max_functions = 64
+text_editor/files/auto_reload_scripts_on_external_change = true
+text_editor/files/auto_reload_and_parse_scripts_on_save = true
+text_editor/files/open_dominant_script_on_scene_change = true
+text_editor/external/use_external_editor = false
+text_editor/external/exec_path = ""
+text_editor/open_scripts/script_temperature_enabled = true
+text_editor/open_scripts/highlight_current_script = true
+text_editor/open_scripts/script_temperature_history_size = 15
+text_editor/open_scripts/current_script_background_color = Color( 1, 1, 1, 0.3 )
+text_editor/open_scripts/group_help_pages = true
+text_editor/open_scripts/sort_scripts_by = 0
+text_editor/open_scripts/list_script_names_as = 0
+text_editor/external/exec_flags = ""
+text_editor/completion/enable_code_completion_delay = true
+text_editor/completion/code_complete_delay = 0.3
+editors/grid_map/preview_size = 64
+editors/tile_map/preview_size = 64
+editors/tile_map/palette_item_hseparation = 8
+editors/tile_map/show_tile_names = true
+editors/tile_map/show_tile_ids = false
+editors/tile_map/sort_tiles_by_name = true
+editors/tile_map/bucket_fill_preview = true
+editors/tile_map/show_tile_info_on_hover = true
+editors/tile_map/palette_min_width = 80
+editors/grid_map/palette_min_width = 230
+_::home::docker-apps::godot-projects::chef_sloth::Main::flex/_recent_scenes = PoolStringArray( "test.tscn" )
+editors/3d_gizmos/gizmo_colors/light = Color( 1, 1, 0.2, 1 )
+editors/3d_gizmos/gizmo_colors/stream_player_3d = Color( 0.4, 0.8, 1, 1 )
+editors/3d_gizmos/gizmo_colors/camera = Color( 0.8, 0.4, 0.8, 1 )
+editors/3d_gizmos/gizmo_colors/skeleton = Color( 1, 0.8, 0.4, 1 )
+editors/3d_gizmos/gizmo_colors/visibility_notifier = Color( 0.8, 0.5, 0.7, 1 )
+editors/3d_gizmos/gizmo_colors/particles = Color( 0.8, 0.7, 0.4, 1 )
+editors/3d_gizmos/gizmo_colors/reflection_probe = Color( 0.6, 1, 0.5, 1 )
+editors/3d_gizmos/gizmo_colors/gi_probe = Color( 0.5, 1, 0.6, 1 )
+editors/3d_gizmos/gizmo_colors/baked_indirect_light = Color( 0.5, 0.6, 1, 1 )
+editors/3d_gizmos/gizmo_colors/shape = Color( 0.5, 0.7, 1, 1 )
+editors/3d_gizmos/gizmo_colors/joint = Color( 0.5, 0.8, 1, 1 )
+editors/3d_gizmos/gizmo_colors/joint_body_a = Color( 0.6, 0.8, 1, 1 )
+editors/3d_gizmos/gizmo_colors/joint_body_b = Color( 0.6, 0.9, 1, 1 )
+editors/3d_gizmos/gizmo_colors/navigation_edge = Color( 0.5, 1, 1, 1 )
+editors/3d_gizmos/gizmo_colors/navigation_edge_disabled = Color( 0.7, 0.7, 0.7, 1 )
+editors/3d_gizmos/gizmo_colors/navigation_solid = Color( 0.5, 1, 1, 0.4 )
+editors/3d_gizmos/gizmo_colors/navigation_solid_disabled = Color( 0.7, 0.7, 0.7, 0.4 )
+editors/3d_gizmos/gizmo_colors/instanced = Color( 0.7, 0.7, 0.7, 0.5 )
+interface/scene_tabs/restore_scenes_on_load = false
+shortcuts = [ "script_text_editor/capitalize", SubResource( 1 ), "script_text_editor/convert_to_lowercase", SubResource( 2 ), "script_text_editor/convert_to_uppercase", SubResource( 3 ) ]
 
