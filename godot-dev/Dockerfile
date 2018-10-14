@@ -23,6 +23,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       libgl-dev \
       libgles2-mesa-dev \
       pulseaudio \
+      alsa-base alsa-utils \
+      pkg-config libx11-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libfreetype6-dev libssl-dev libudev-dev libxi-dev libxrandr-dev \
     && wget https://downloads.tuxfamily.org/godotengine/3.0.6/Godot_v3.0.6-stable_x11.64.zip \
     && unzip Godot_v3.0.6-stable_x11.64.zip \
     && rm Godot_v3.0.6-stable_x11.64.zip \
@@ -35,8 +37,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-#      alsa-base \
-#      alsa-utils \
+# gcc-c++ freetype-devel openssl-dev alsa-lib-dev mesa-libgl-dev mesa-libglu-dev
 
 # Run as non privileged user
 USER docker-apps
