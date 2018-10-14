@@ -59,3 +59,6 @@ docker run --rm -d \
   -v "$HOST_INPUT_2:$CONTAINER_INPUT_2" \
   --name=$APP \
   docker-apps:$APP
+
+# Crashes unless run from exec for some reason :(
+bash -c "docker exec $APP godot && docker stop $APP" &>/dev/null &

@@ -21,6 +21,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       libasound2-dev \
       libpulse-dev \
       libgl-dev \
+      libgles2-mesa-dev \
+      pulseaudio \
     && wget https://downloads.tuxfamily.org/godotengine/3.0.6/Godot_v3.0.6-stable_x11.64.zip \
     && unzip Godot_v3.0.6-stable_x11.64.zip \
     && rm Godot_v3.0.6-stable_x11.64.zip \
@@ -33,13 +35,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-#      libgles2-mesa-dev \
-#      pulseaudio \
 #      alsa-base \
 #      alsa-utils \
 
 # Run as non privileged user
 USER docker-apps
 
-ENTRYPOINT ["/usr/bin/godot"]
-#ENTRYPOINT ["tail", "/dev/null", "-f"]
+#ENTRYPOINT ["/usr/bin/godot"]
+ENTRYPOINT ["tail", "/dev/null", "-f"]
